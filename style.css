@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container input {
+    display: none;
+}
+
+label ul {
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+}
+
+label ul li {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #999;
+    border-radius: 10px;
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+label ul li i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+label ul li:hover  {
+    color: white;
+    transform: scale(1.05);
+}
+
+label ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+li:nth-child(1) {
+    z-index: 1;
+    position: relative;
+}
+
+input:checked+label li:nth-child(1) i {
+    color: white;
+    transform: rotate(45deg);
+}
+
+input:checked+label li:nth-child(2) {
+    top: -55px;
+}
+
+input:checked+label li:nth-child(3) {
+    top: 55px;
+}
+
+input:checked+label li:nth-child(4) {
+    top: 0px;
+    left: -55px;
+}
+
+input:checked+label li:nth-child(5) {
+    top: 0px;
+    left: 55px;
+}
